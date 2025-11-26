@@ -104,7 +104,6 @@ body {
 }
 
 
-
 .post-schedule-card {
   background-color: var(--Purple-100);
   padding: 1rem;
@@ -113,7 +112,8 @@ body {
 
 .post-schedule-card h2 {
   font-size: 1.4rem;
-  padding: 0.7rem;
+  padding: 0.8rem;
+  font-weight: 500;
 }
 
 
@@ -148,5 +148,69 @@ body {
 .followers-card h2 {
   max-width: 220px;
   color: var(--White);
+  font-weight: 500;
   font-size: 1.8rem;
+  text-align: center;
+  line-height: 0.8;
+  padding-bottom: 1.2rem;
+  letter-spacing: -0.1rem;
+}
+
+
+.growth-card {
+  background-color: var(--White);
+  padding: 1.5rem;
+  color: var(--Black);
+  box-shadow: -5px 8px 30px 3px var(--Yellow-100);
+}
+
+
+.growth-card h2 {
+  font-size: 3rem;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+
+.growth-card p {
+  font-weight: 500;
+  font-size: 1rem;
+  margin-bottom: 1.1rem;
+}
+
+
+.create-post-card {
+  background-color: var(--Yellow-100);
+  padding: 1.7rem;
+  font-size: 1.2rem;
+  color: var(--Black);
+  line-height: 0.8;
+}
+
+
+.create-post-card h2 {
+  margin-bottom: 1.2rem;
+  font-weight: 500;
+}
+
+
+.create-post-card span {
+  font-style: italic;
+  color: var(--Purple-500);
+}
+
+
+.ai-content-card {
+  background-color: var(--Yellow-500);
+  padding: 1.2rem;
+}
+
+
+.ai-content-card h2{
+  font-size: 1.7rem;
+  font-weight: 500;
+  letter-spacing: -0.1rem;
+  line-height: 1;
+  max-width: 220px;
+  margin-bottom: 1.2rem;
 }
