@@ -82,7 +82,6 @@ body {
 }
 
 
-
 .bento-card > * {
   color: var(--Black);
   background-color: var(--Purple-500);
@@ -122,6 +121,12 @@ body {
 }
 
 
+.gold-10x,
+.fs {
+  font-style: italic;
+}
+
+
 .header-card img {
   width: 70%;
 }
@@ -137,6 +142,12 @@ body {
 .footer-card h2 {
   margin-top: 0.8rem;
   letter-spacing: -0.1rem;
+}
+
+
+.footer-card img {
+  width: 100%;
+  filter: drop-shadow(0 0 1rem var(--Yellow-100));
 }
 
 
@@ -278,20 +289,20 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  max-width: 1000px;
+  max-width: 62.5rem;
 }
 
 
 .bento-card {
   display: grid;
   grid-template-columns: 0.5fr 0.5fr;
-  grid-template-rows: 0.5fr 0.5fr;
+  grid-template-rows: repeat(5, 0.5fr);
   grid-template-areas:
-    "header header"
-    "footer calendar"
-    "post follower"
-    "growth create"
-    "ai ai";
+  "header header"
+  "footer calendar"
+  "post follower"
+  "growth create"
+  "ai ai";
 }
 
 
@@ -325,9 +336,11 @@ body {
 .footer-card h2,
 .calendar-card h2,
 .post-schedule-card h2,
-.followers-card h2 {
+.followers-card h2,
+.create-post-card h2 {
   font-size: 2rem;
 }
+
 
 .calendar-card {
   grid-area: calendar;
@@ -337,7 +350,7 @@ body {
 
 .post-schedule-card {
   grid-area: post;
-  padding: 2rem;
+  padding: 1rem;
 }
 
 
@@ -346,8 +359,14 @@ body {
   font-size: 1.3rem;
 }
 
+
 .followers-card {
   grid-area: follower;
+}
+
+
+.followers-card img {
+  margin-top: 2rem;
 }
 
 
@@ -364,252 +383,65 @@ body {
 .ai-content-card {
   grid-area: ai;
 }
-/* .card-wrapper {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 12.5rem 12.5rem 12.5rem 12.5rem;
-  padding: 1rem;
-  gap: 2rem;
-  grid-template-areas:
-    "create header header post"
-    "create footer calendar post"
-    "ai footer calendar post"
-    "ai growth follower follower";
+
+
+.ai-content-card h2 {
+  font-size: 2rem;
 }
 
 
-.header-card {
-  grid-area: header;
-  max-height: 21.875rem;
-}
-
-.header-card h1 {
-  
-}
-.footer-card {
-  grid-area: footer;
-  align-self: start;
-} */
-
-/* .header-card {
-  background-color: var(--Purple-500);
-  padding: 2rem;
-  color: var(--White);
-  display: flex;
-  flex-direction: column;
-  gap: 0.6rem;
-  place-items: center;
-} */
-
-
-
-
-
-
-
-
-/*.header-card h1 {
-  font-size: 2.5rem;
-  font-weight: 500;
-  line-height: 1;
-  max-width: 13.75rem;
-  margin-bottom: 0.7rem;
-  text-align: center;
-}
-
-
-.header-card p {
-  font-size: 1rem;
-}
-
-
-.gold-10x {
-  color: var(--Yellow-500);
-}
-
-
-.italic {
-  font-style: italic;
-}
-
-
-.footer-card {
-  background-color: var(--White);
-  padding: 1rem;
-  box-shadow: -0.3125rem 0.5rem 1.875rem 0.1875rem var(--Yellow-100);
-}
-
-
-.footer-card h2 {
-  margin-top: 0.8rem;
-  letter-spacing: -0.1rem;
-}
-
-
-.footer-card h2,
-.calendar-card h2 {
-  font-size: 1.5rem;
-  font-weight: 500;
-  line-height: 1;
-}
-
-
-.calendar-card {
-  background-color: var(--Yellow-500);
-  padding: 1rem;
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  letter-spacing: -0.1rem;
-}
-
-
-.post-schedule-card {
-  background-color: var(--Purple-100);
-  padding: 1rem;
-}
-
-
-.post-schedule-card h2 {
-  font-size: 1.4rem;
-  padding: 0.8rem;
-  font-weight: 500;
-}
-
-
-.post-schedule-card p {
-  font-weight: 500;
-  padding: 1rem;
-  text-align: center;
-}
-
-
-.followers-card {
-  background-color: var(--Purple-500);
-}
-
-
-.followers-img {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 2rem 3rem;
-}
-
-
-.followers-card {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-
-.followers-card h2 {
-  max-width: 13.75rem;
-  color: var(--White);
-  font-weight: 500;
-  font-size: 1.8rem;
-  text-align: center;
-  line-height: 0.8;
-  padding-bottom: 1.2rem;
-  letter-spacing: -0.1rem;
-}
-
-
-.growth-card {
-  background-color: var(--White);
-  padding: 1.5rem;
-  color: var(--Black);
-  box-shadow: -0.3125rem 0.5rem 1.875rem 0.1875rem var(--Yellow-100);
-}
-
-
-.growth-card h2 {
-  font-size: 3rem;
-  font-weight: 500;
-  line-height: 1.4;
-}
-
-
-.growth-card p {
-  font-weight: 500;
-  font-size: 1rem;
-  margin-bottom: 1.1rem;
-}
-
-
-.create-post-card {
-  background-color: var(--Yellow-100);
-  padding: 1.7rem;
-  font-size: 1.2rem;
-  color: var(--Black);
-  line-height: 0.8;
-}
-
-
-.create-post-card h2 {
-  margin-bottom: 1.2rem;
-  font-weight: 500;
-}
-
-
-.create-post-card span {
-  font-style: italic;
-  color: var(--Purple-500);
-}
-
-
-.ai-content-card {
-  background-color: var(--Yellow-500);
-  padding: 1.2rem;
-}
-
-
-.ai-content-card h2{
-  font-size: 1.7rem;
-  font-weight: 500;
-  letter-spacing: -0.1rem;
-  line-height: 1;
-  max-width: 13.75rem;
-  margin-bottom: 1.2rem;
+.ai-content-card img {
+  width: 20%;
+  margin-top: 1.1rem;
 }
 
 
 @media (min-width: 75em) {
 body {
-  max-width: 1200px;
-  display: grid;
-  place-items: center;
-  padding: 0 1.5rem;
+  margin: 2rem auto;
 }
 
 
-.card-wrapper {
+.bento-card {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 12.5rem 12.5rem 12.5rem 12.5rem;
+  grid-template-rows: repeat(8, 7rem);
   padding: 1rem;
-  gap: 2rem;
+  gap: 1.5rem;
   grid-template-areas:
-    "create header header post"
-    "create footer calendar post"
-    "ai footer calendar post"
-    "ai growth follower follower";
+  "create header header post"
+  "create header header post"
+  "create footer calendar post"
+  "ai footer calendar post"
+  "ai growth follower follower"
+  "ai growth follower follower";
 }
 
 
 .header-card {
   grid-area: header;
-  max-height: 21.875rem;
 }
 
-.header-card h1 {
-  
+
+.header-card img {
+  width: 45%;
 }
+
+
+.header-card p {
+  font-size: 1.2rem;
+  padding-bottom: 1rem;
+}
+
+
 .footer-card {
   grid-area: footer;
-  align-self: start;
+}
+
+
+.footer-card h2 {
+  font-size: 1.7rem;
+  padding-top: 1rem;
 }
 
 
@@ -618,18 +450,52 @@ body {
 }
 
 
+.calendar-card h2,
+.post-schedule-card h2 {
+  font-size: 1.7rem;
+}
+
+
+.calendar-card img {
+  width: 100%;
+}
+
+
 .post-schedule-card {
   grid-area: post;
 }
 
 
+.post-schedule-card p {
+  text-align: left;
+  font-size: 1.1rem;
+  margin-top: 1rem;
+}
+
+
 .followers-card {
   grid-area: follower;
+  display: flex;
+}
+
+
+.followers-card h2 {
+  text-align: left;
+}
+
+
+.followers-card img {
+  margin-top: 0;
 }
 
 
 .growth-card {
   grid-area: growth;
+}
+
+
+.growth-card img {
+  width: 90%;
 }
 
 
@@ -639,33 +505,28 @@ body {
 }
 
 
-.create-post-card h2 {
-  font-size: 2.5rem;
+.create-post-card h2,
+.ai-content-card h2 {
+  font-size: 2.2rem;
   margin-top: 1.5rem;
 }
 
-.create-img {
+
+.create-post-card img {
   width: 90%;
   margin-top: 3%;
 }
+
 
 .ai-content-card {
   grid-area: ai;
   padding: 1.3rem 1.5rem;
 }
 
-.ai-content-card h2 {
-  font-size: 2.5rem;
-}
 
-
-.ai-img {
+.ai img {
   width: 100%;
   margin-top: 15%;
 }
 
-
-
-
 }
- */
