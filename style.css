@@ -395,10 +395,13 @@ body {
   margin-top: 1.1rem;
 }
 
+}
+
 
 @media (min-width: 75em) {
 body {
-  margin: 2rem auto;
+  max-width: 81.25rem;
+  margin: 0 auto;
 }
 
 
@@ -463,6 +466,11 @@ body {
 
 .post-schedule-card {
   grid-area: post;
+}
+
+
+.post-schedule-card img {
+  margin-left: 1.56rem;
 }
 
 
